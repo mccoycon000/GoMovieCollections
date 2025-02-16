@@ -5,10 +5,10 @@ import (
 	"database/sql"
 )
 
-type PostsStore struct {
+type ListsStore struct {
 	db *sql.DB
 }
 
-func (s *PostsStore) Create(ctx context.Context) error {
+func (s *ListsStore) Create(ctx context.Context) error {
 	return nil
 }
