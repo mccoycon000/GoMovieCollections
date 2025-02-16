@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"movie_collections/internal/store"
 	"net/http"
 	"time"
 
@@ -11,6 +12,7 @@ import (
 
 type application struct {
 	config config
+	store  store.Storage
 }
 
 type config struct {
