@@ -10,13 +10,13 @@ type Storage struct {
 		Create(context.Context, *Movie) error
 	}
 	Users interface {
-		Create(context.Context) error
+		Create(context.Context, *User) error
 	}
 }
 
 func NewStorage(db *sql.DB) Storage {
 	return Storage{
 		Movies: &MovieStore{db},
-		Users: &UserStore{db},
+		Users:  &UserStore{db},
 	}
 }
